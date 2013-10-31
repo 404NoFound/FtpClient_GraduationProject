@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace FTPClient
 {
     public partial class MainForm : Form
@@ -19,6 +20,12 @@ namespace FTPClient
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void SiteExplorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+           
         }
     }
 }

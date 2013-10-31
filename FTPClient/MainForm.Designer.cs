@@ -28,68 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.wToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.站点管理器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2.SuspendLayout();
+            this.TopmenuStrip = new System.Windows.Forms.MenuStrip();
+            this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SiteExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddToSiteExplorertoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TopmenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // TopmenuStrip
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 25);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.TopmenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.文件ToolStripMenuItem});
+            this.TopmenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.TopmenuStrip.Name = "TopmenuStrip";
+            this.TopmenuStrip.Size = new System.Drawing.Size(944, 25);
+            this.TopmenuStrip.TabIndex = 0;
+            this.TopmenuStrip.Text = "TopmenuStrip";
             // 
-            // menuStrip2
+            // 文件ToolStripMenuItem
             // 
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.wToolStripMenuItem,
-            this.编辑ToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1008, 25);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
+            this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SiteExplorerToolStripMenuItem,
+            this.AddToSiteExplorertoolStripMenuItem});
+            this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
+            this.文件ToolStripMenuItem.ShortcutKeyDisplayString = "S";
+            this.文件ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
+            this.文件ToolStripMenuItem.Text = "文件 &s";
             // 
-            // wToolStripMenuItem
+            // SiteExplorerToolStripMenuItem
             // 
-            this.wToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.站点管理器ToolStripMenuItem});
-            this.wToolStripMenuItem.Name = "wToolStripMenuItem";
-            this.wToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.wToolStripMenuItem.Text = "文件";
+            this.SiteExplorerToolStripMenuItem.Name = "SiteExplorerToolStripMenuItem";
+            this.SiteExplorerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.SiteExplorerToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.SiteExplorerToolStripMenuItem.Text = "站点管理器&s";
+            this.SiteExplorerToolStripMenuItem.Click += new System.EventHandler(this.SiteExplorerToolStripMenuItem_Click);
             // 
-            // 编辑ToolStripMenuItem
+            // AddToSiteExplorertoolStripMenuItem
             // 
-            this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
-            this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.编辑ToolStripMenuItem.Text = "编辑";
-            // 
-            // 站点管理器ToolStripMenuItem
-            // 
-            this.站点管理器ToolStripMenuItem.CheckOnClick = true;
-            this.站点管理器ToolStripMenuItem.Name = "站点管理器ToolStripMenuItem";
-            this.站点管理器ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.站点管理器ToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.站点管理器ToolStripMenuItem.Text = "站点管理器";
+            this.AddToSiteExplorertoolStripMenuItem.Name = "AddToSiteExplorertoolStripMenuItem";
+            this.AddToSiteExplorertoolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.AddToSiteExplorertoolStripMenuItem.Text = "添加当前链接到站点管理器";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 730);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(944, 602);
+            this.Controls.Add(this.TopmenuStrip);
             this.Name = "MainForm";
             this.Text = "FtpClint--by ZYX";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.TopmenuStrip.ResumeLayout(false);
+            this.TopmenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,11 +88,11 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem wToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 站点管理器ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip TopmenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SiteExplorerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddToSiteExplorertoolStripMenuItem;
+
     }
 }
 
