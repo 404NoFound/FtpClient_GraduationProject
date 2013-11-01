@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using FTPClient.Forms;
 
 namespace FTPClient
 {
@@ -24,8 +24,10 @@ namespace FTPClient
 
         private void SiteExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-           
+            SiteExplorerForm siteExplorer = new SiteExplorerForm();
+            siteExplorer.Show();
+          //  siteExplorer.ShowDialog();
+
         }
     }
 }

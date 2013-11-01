@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.button1);
             this.Name = "SiteExplorerForm";
-            this.Text = "SiteExplorerForm";
+            this.Text = "CL";
             this.ResumeLayout(false);
 
         }
