@@ -14,7 +14,7 @@ namespace FTPClient.Class
         static string user = System.Configuration.ConfigurationSettings.AppSettings["user"];  //用户名
         static string pwd = System.Configuration.ConfigurationSettings.AppSettings["pwd"];  //密码
         static string port = System.Configuration.ConfigurationSettings.AppSettings["port"];  //端口
-        static void Main(string[] args)
+       /* static void Main(string[] args)
         {
             FTPClient  client = new FTPClient(ftpServer, "/", user, pwd, int.Parse(port));
             client.Connect();
@@ -24,7 +24,7 @@ namespace FTPClient.Class
             Console.WriteLine("下载完毕");
             System.Threading.Thread.Sleep(3000);
         }
-
+        */
         /// <summary>
         /// 在本地目录下创建一个以日期为名称的目录，我做这个ftp的主要目的是为了每天都备份
         /// </summary>

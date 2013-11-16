@@ -14,6 +14,7 @@ namespace FTPClient.Forms
         public SiteExplorerForm()
         {
             InitializeComponent();
+            
         }
     }
 }
