@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\FTP.cs" />
+    <Compile Include="Class\FtpContect.cs" />
     <Compile Include="Class\FtpGet.cs" />
     <Compile Include="Forms\SiteExplorerForm.cs">
       <SubType>Form</SubType>

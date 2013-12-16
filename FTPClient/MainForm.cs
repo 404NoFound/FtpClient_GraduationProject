@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using FTPClient.Forms;
+using FTPClient.Class;
+
 
 namespace FTPClient
 {
@@ -27,6 +29,17 @@ namespace FTPClient
             SiteExplorerForm siteExplorer = new SiteExplorerForm();
             siteExplorer.Show();
           //  siteExplorer.ShowDialog();
+
+        }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+            string ServerIP = strSeverIP.Text;
+            string UserName = strUserName.Text;
+            string PassWord = strUserPassWord.Text;
+            int ServerPort = Convert.ToInt32(strSeverIP.Text);
+             
+
 
         }
     }

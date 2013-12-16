@@ -9,13 +9,13 @@ namespace FTPClient.Class
     /// <summary>
     /// FTP Client
     /// </summary>
-    public class FTPClient
+    public class FtpContect
     {
         #region 构造函数
         /// <summary>
         /// 缺省构造函数
         /// </summary>
-        public FTPClient()
+        public FtpContect()
         {
             strRemoteHost = "";
             strRemotePath = "";
@@ -33,7 +33,7 @@ namespace FTPClient.Class
         /// <param name="remoteUser">登录用户账号</param>
         /// <param name="remotePass">登录用户密码</param>
         /// <param name="remotePort">FTP服务器端口</param>
-        public FTPClient(string remoteHost, string remotePath, string remoteUser, string remotePass, int remotePort)
+        public FtpContect(string remoteHost, string remotePath, string remoteUser, string remotePass, int remotePort)
         {
             strRemoteHost = remoteHost;
             strRemotePath = remotePath;

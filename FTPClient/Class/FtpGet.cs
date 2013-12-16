@@ -60,7 +60,7 @@ namespace FTPClient.Class
         /// <param name="path">远程路径</param>
         /// <param name="client"></param>
         /// <param name="folder"></param>
-        private static void GetFolder(string fileMark, string path, FTPClient client, string folder)
+        private static void GetFolder(string fileMark, string path, FtpContect client, string folder)
         {
             string[] dirs = client.Dir(path);  //获取目录下的内容
             client.ChDir(path);  //改变目录
