@@ -42,14 +42,17 @@
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelSeverIP = new System.Windows.Forms.Label();
-            this.strSeverIP = new System.Windows.Forms.TextBox();
+            this.textboxFtpIP = new System.Windows.Forms.TextBox();
             this.labelSeverPort = new System.Windows.Forms.Label();
-            this.intSeverPort = new System.Windows.Forms.TextBox();
+            this.textboxSeverPort = new System.Windows.Forms.TextBox();
             this.labelUserPassword = new System.Windows.Forms.Label();
             this.labelUserName = new System.Windows.Forms.Label();
-            this.strUserPassWord = new System.Windows.Forms.TextBox();
-            this.strUserName = new System.Windows.Forms.TextBox();
+            this.textboxUserPassWord = new System.Windows.Forms.TextBox();
+            this.textboxUserName = new System.Windows.Forms.TextBox();
             this.buttonConnect = new System.Windows.Forms.Button();
+            this.labelFtpPath = new System.Windows.Forms.Label();
+            this.textBoxFtpPath = new System.Windows.Forms.TextBox();
+            this.labelIPError = new System.Windows.Forms.Label();
             this.TopmenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,7 +117,7 @@
             // SettingsToolStripMenuItem
             // 
             this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
-            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.SettingsToolStripMenuItem.Text = "设置 ";
             // 
             // 服务器SToolStripMenuItem
@@ -151,7 +154,7 @@
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.关于ToolStripMenuItem.Text = "关于 &A";
             // 
             // labelSeverIP
@@ -163,12 +166,16 @@
             this.labelSeverIP.TabIndex = 1;
             this.labelSeverIP.Text = "服务器地址";
             // 
-            // strSeverIP
+            // textboxFtpIP
             // 
-            this.strSeverIP.Location = new System.Drawing.Point(84, 26);
-            this.strSeverIP.Name = "strSeverIP";
-            this.strSeverIP.Size = new System.Drawing.Size(126, 21);
-            this.strSeverIP.TabIndex = 2;
+            this.textboxFtpIP.AllowDrop = true;
+            this.textboxFtpIP.Location = new System.Drawing.Point(84, 26);
+            this.textboxFtpIP.Name = "textboxFtpIP";
+            this.textboxFtpIP.Size = new System.Drawing.Size(126, 21);
+            this.textboxFtpIP.TabIndex = 2;
+            this.textboxFtpIP.WordWrap = false;
+            this.textboxFtpIP.TextChanged += new System.EventHandler(this.strSeverIP_TextChanged);
+            this.textboxFtpIP.Leave += new System.EventHandler(this.strSeverIP_Leave);
             // 
             // labelSeverPort
             // 
@@ -179,12 +186,12 @@
             this.labelSeverPort.TabIndex = 3;
             this.labelSeverPort.Text = "服务器端口";
             // 
-            // intSeverPort
+            // textboxSeverPort
             // 
-            this.intSeverPort.Location = new System.Drawing.Point(287, 26);
-            this.intSeverPort.Name = "intSeverPort";
-            this.intSeverPort.Size = new System.Drawing.Size(51, 21);
-            this.intSeverPort.TabIndex = 4;
+            this.textboxSeverPort.Location = new System.Drawing.Point(287, 26);
+            this.textboxSeverPort.Name = "textboxSeverPort";
+            this.textboxSeverPort.Size = new System.Drawing.Size(51, 21);
+            this.textboxSeverPort.TabIndex = 4;
             // 
             // labelUserPassword
             // 
@@ -204,23 +211,23 @@
             this.labelUserName.TabIndex = 6;
             this.labelUserName.Text = "用户名";
             // 
-            // strUserPassWord
+            // textboxUserPassWord
             // 
-            this.strUserPassWord.Location = new System.Drawing.Point(542, 26);
-            this.strUserPassWord.Name = "strUserPassWord";
-            this.strUserPassWord.Size = new System.Drawing.Size(100, 21);
-            this.strUserPassWord.TabIndex = 7;
+            this.textboxUserPassWord.Location = new System.Drawing.Point(542, 26);
+            this.textboxUserPassWord.Name = "textboxUserPassWord";
+            this.textboxUserPassWord.Size = new System.Drawing.Size(100, 21);
+            this.textboxUserPassWord.TabIndex = 7;
             // 
-            // strUserName
+            // textboxUserName
             // 
-            this.strUserName.Location = new System.Drawing.Point(401, 26);
-            this.strUserName.Name = "strUserName";
-            this.strUserName.Size = new System.Drawing.Size(100, 21);
-            this.strUserName.TabIndex = 8;
+            this.textboxUserName.Location = new System.Drawing.Point(401, 26);
+            this.textboxUserName.Name = "textboxUserName";
+            this.textboxUserName.Size = new System.Drawing.Size(100, 21);
+            this.textboxUserName.TabIndex = 8;
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(672, 23);
+            this.buttonConnect.Location = new System.Drawing.Point(814, 22);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(75, 23);
             this.buttonConnect.TabIndex = 9;
@@ -228,19 +235,47 @@
             this.buttonConnect.UseVisualStyleBackColor = true;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
+            // labelFtpPath
+            // 
+            this.labelFtpPath.AutoSize = true;
+            this.labelFtpPath.Location = new System.Drawing.Point(649, 29);
+            this.labelFtpPath.Name = "labelFtpPath";
+            this.labelFtpPath.Size = new System.Drawing.Size(53, 12);
+            this.labelFtpPath.TabIndex = 10;
+            this.labelFtpPath.Text = "远程路径";
+            // 
+            // textBoxFtpPath
+            // 
+            this.textBoxFtpPath.Location = new System.Drawing.Point(708, 24);
+            this.textBoxFtpPath.Name = "textBoxFtpPath";
+            this.textBoxFtpPath.Size = new System.Drawing.Size(100, 21);
+            this.textBoxFtpPath.TabIndex = 11;
+            // 
+            // labelIPError
+            // 
+            this.labelIPError.AutoSize = true;
+            this.labelIPError.Location = new System.Drawing.Point(84, 54);
+            this.labelIPError.Name = "labelIPError";
+            this.labelIPError.Size = new System.Drawing.Size(41, 12);
+            this.labelIPError.TabIndex = 12;
+            this.labelIPError.Text = "label1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 602);
+            this.Controls.Add(this.labelIPError);
+            this.Controls.Add(this.textBoxFtpPath);
+            this.Controls.Add(this.labelFtpPath);
             this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.strUserName);
-            this.Controls.Add(this.strUserPassWord);
+            this.Controls.Add(this.textboxUserName);
+            this.Controls.Add(this.textboxUserPassWord);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.labelUserPassword);
-            this.Controls.Add(this.intSeverPort);
+            this.Controls.Add(this.textboxSeverPort);
             this.Controls.Add(this.labelSeverPort);
-            this.Controls.Add(this.strSeverIP);
+            this.Controls.Add(this.textboxFtpIP);
             this.Controls.Add(this.labelSeverIP);
             this.Controls.Add(this.TopmenuStrip);
             this.Name = "MainForm";
@@ -269,14 +304,17 @@
         private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.Label labelSeverIP;
-        private System.Windows.Forms.TextBox strSeverIP;
+        private System.Windows.Forms.TextBox textboxFtpIP;
         private System.Windows.Forms.Label labelSeverPort;
-        private System.Windows.Forms.TextBox intSeverPort;
+        private System.Windows.Forms.TextBox textboxSeverPort;
         private System.Windows.Forms.Label labelUserPassword;
         private System.Windows.Forms.Label labelUserName;
-        private System.Windows.Forms.TextBox strUserPassWord;
-        private System.Windows.Forms.TextBox strUserName;
+        private System.Windows.Forms.TextBox textboxUserPassWord;
+        private System.Windows.Forms.TextBox textboxUserName;
         private System.Windows.Forms.Button buttonConnect;
+        private System.Windows.Forms.Label labelFtpPath;
+        private System.Windows.Forms.TextBox textBoxFtpPath;
+        private System.Windows.Forms.Label labelIPError;
 
     }
 }
