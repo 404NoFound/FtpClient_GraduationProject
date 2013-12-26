@@ -34,12 +34,16 @@ namespace FTPClient
 
         private void buttonConnect_Click(object sender, EventArgs e)
         {
+            if (FormCheckout.IpAddressCheck(textboxServerIP.Text.ToString().Trim()))
+            {
+                textboxServerIP.Focus();
+            }
+
             string ServerIP = textboxServerIP.Text;
             string UserName = textboxUserName.Text;
             string PassWord = textboxUserPassWord.Text;
             int ServerPort = Convert.ToInt32(textboxServerIP.Text);
-             
-
+            
 
         }
 
@@ -48,15 +52,7 @@ namespace FTPClient
 
         }
 
-        private void strSeverIP_Leave(object sender, EventArgs e)
-        {
-            string con = textboxServerIP.Text.ToString().Trim();//获得输入的字符串
-            if (FormCheckout.IpAddressCheck(con))
-            {                
-                textboxServerIP.Focus();
-            }
-          
-        }
+       
 
             
     }

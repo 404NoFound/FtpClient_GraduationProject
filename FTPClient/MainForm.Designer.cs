@@ -53,6 +53,7 @@
             this.labelFtpPath = new System.Windows.Forms.Label();
             this.textBoxServerPath = new System.Windows.Forms.TextBox();
             this.textBoxServerMessage = new System.Windows.Forms.TextBox();
+            this.myFileView1 = new FTPClient.Forms.MyFileView();
             this.TopmenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,7 +176,6 @@
             this.textboxServerIP.TabIndex = 2;
             this.textboxServerIP.WordWrap = false;
             this.textboxServerIP.TextChanged += new System.EventHandler(this.strSeverIP_TextChanged);
-            this.textboxServerIP.Leave += new System.EventHandler(this.strSeverIP_Leave);
             // 
             // labelSeverPort
             // 
@@ -261,11 +261,19 @@
             this.textBoxServerMessage.Size = new System.Drawing.Size(898, 130);
             this.textBoxServerMessage.TabIndex = 12;
             // 
+            // myFileView1
+            // 
+            this.myFileView1.Location = new System.Drawing.Point(15, 224);
+            this.myFileView1.Name = "myFileView1";
+            this.myFileView1.Size = new System.Drawing.Size(467, 309);
+            this.myFileView1.TabIndex = 13;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 602);
+            this.Controls.Add(this.myFileView1);
             this.Controls.Add(this.textBoxServerMessage);
             this.Controls.Add(this.textBoxServerPath);
             this.Controls.Add(this.labelFtpPath);
@@ -316,6 +324,7 @@
         private System.Windows.Forms.Label labelFtpPath;
         private System.Windows.Forms.TextBox textBoxServerPath;
         private System.Windows.Forms.TextBox textBoxServerMessage;
+        private Forms.MyFileView myFileView1;
 
     }
 }

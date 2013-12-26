@@ -66,6 +66,12 @@
     <Compile Include="Class\FormCheckout.cs" />
     <Compile Include="Class\FtpContect.cs" />
     <None Include="Class\FtpGet.cs1" />
+    <Compile Include="Forms\MyFileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MyFileView.Designer.cs">
+      <DependentUpon>MyFileView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SiteExplorerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\MyFileView.resx">
+      <DependentUpon>MyFileView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SiteExplorerForm.resx">
       <DependentUpon>SiteExplorerForm.cs</DependentUpon>
     </EmbeddedResource>
