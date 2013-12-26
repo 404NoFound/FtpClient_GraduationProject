@@ -5,15 +5,15 @@ using System.Text;
 using System.IO;
 
 namespace FTPClient.Class
-{
+{/*
     class FTPGet
     {
-        static string remotingFolder = System.Configuration.ConfigurationSettings.AppSettings["remotingFolder"];  //远程ftp文件目录
-        static string localFolder = System.Configuration.ConfigurationSettings.AppSettings["localFolder"];  //要下载到的本地目录
-        static string ftpServer = System.Configuration.ConfigurationSettings.AppSettings["ftpServer"];  //ftp服务器
-        static string user = System.Configuration.ConfigurationSettings.AppSettings["user"];  //用户名
-        static string pwd = System.Configuration.ConfigurationSettings.AppSettings["pwd"];  //密码
-        static string port = System.Configuration.ConfigurationSettings.AppSettings["port"];  //端口
+        //static string remotingFolder = System.Configuration.ConfigurationSettings.AppSettings["remotingFolder"];  //远程ftp文件目录
+        //static string localFolder = System.Configuration.ConfigurationSettings.AppSettings["localFolder"];  //要下载到的本地目录
+        //static string ftpServer = System.Configuration.ConfigurationSettings.AppSettings["ftpServer"];  //ftp服务器
+        //static string user = System.Configuration.ConfigurationSettings.AppSettings["user"];  //用户名
+        //static string pwd = System.Configuration.ConfigurationSettings.AppSettings["pwd"];  //密码
+        //static string port = System.Configuration.ConfigurationSettings.AppSettings["port"];  //端口
        /* static void Main(string[] args)
         {
             FTPClient  client = new FTPClient(ftpServer, "/", user, pwd, int.Parse(port));
@@ -31,7 +31,7 @@ namespace FTPClient.Class
         /// <returns>创建的目录名</returns>
         private static string CreateFolder()
         {
-            string folder=localFolder + "\\"+DateTime.Now.ToShortDateString();
+           // string folder=localFolder + "\\"+DateTime.Now.ToShortDateString();
             if (!Directory.Exists(folder))
                 Directory.CreateDirectory(folder);
             
@@ -99,7 +99,7 @@ namespace FTPClient.Class
                     }
                 }
             }
-
+*/
         }
     }
 }

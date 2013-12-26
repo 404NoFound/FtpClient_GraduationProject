@@ -10,13 +10,13 @@ namespace FTPClient.Class
 {
    static class FormCheckout
     {
-        public  static void IpAddressCheck(string ServerIP){
+        public  static bool IpAddressCheck(string ServerIP){
              string con =ServerIP;//获得输入的字符串
             if (con.Contains("."))
             {
                 string[] lines = new string[4];
                 string s = ".";
-                lines = strSeverIP.Text.Split(s.ToCharArray(), 4);//检查字符串中"."的个数
+               lines = con.Split(s.ToCharArray(), 4);//检查字符串中"."的个数
                 if (lines.Count().Equals(4))
                 {
                     for (int i = 0; i < 4; i++)
@@ -26,35 +26,31 @@ namespace FTPClient.Class
                         {
                             if (Convert.ToInt32(lines[i]) >= 255)//检查是否大于255
                             {
-                                MessageBox.Show("Error");
+                                MessageBox.Show("IP Error");
                                 return false;
                             }
-                            else
-                            {
-                                labelIPError.Text = "合法";
-                            }
+                         
                         }
                         else
                         {
-                            MessageBox.Show("Error");
-                            strSeverIP.Focus();
+                           MessageBox.Show("请重新输入");
+                            return false;
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Error");
-                    strSeverIP.Focus();
+                    MessageBox.Show("请重新输入");
+                   return false;
                 }
             }
             else
             {
-                MessageBox.Show("Error");
-                strSeverIP.Focus();
+                MessageBox.Show("请重新输入");
+                return false;
             }
+            return false;
         }
     }
       
-        }
-    }
 }

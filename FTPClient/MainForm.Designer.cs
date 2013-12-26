@@ -42,7 +42,7 @@
             this.帮助HToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelSeverIP = new System.Windows.Forms.Label();
-            this.textboxFtpIP = new System.Windows.Forms.TextBox();
+            this.textboxServerIP = new System.Windows.Forms.TextBox();
             this.labelSeverPort = new System.Windows.Forms.Label();
             this.textboxSeverPort = new System.Windows.Forms.TextBox();
             this.labelUserPassword = new System.Windows.Forms.Label();
@@ -51,8 +51,8 @@
             this.textboxUserName = new System.Windows.Forms.TextBox();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.labelFtpPath = new System.Windows.Forms.Label();
-            this.textBoxFtpPath = new System.Windows.Forms.TextBox();
-            this.labelIPError = new System.Windows.Forms.Label();
+            this.textBoxServerPath = new System.Windows.Forms.TextBox();
+            this.textBoxServerMessage = new System.Windows.Forms.TextBox();
             this.TopmenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,16 +166,16 @@
             this.labelSeverIP.TabIndex = 1;
             this.labelSeverIP.Text = "服务器地址";
             // 
-            // textboxFtpIP
+            // textboxServerIP
             // 
-            this.textboxFtpIP.AllowDrop = true;
-            this.textboxFtpIP.Location = new System.Drawing.Point(84, 26);
-            this.textboxFtpIP.Name = "textboxFtpIP";
-            this.textboxFtpIP.Size = new System.Drawing.Size(126, 21);
-            this.textboxFtpIP.TabIndex = 2;
-            this.textboxFtpIP.WordWrap = false;
-            this.textboxFtpIP.TextChanged += new System.EventHandler(this.strSeverIP_TextChanged);
-            this.textboxFtpIP.Leave += new System.EventHandler(this.strSeverIP_Leave);
+            this.textboxServerIP.AllowDrop = true;
+            this.textboxServerIP.Location = new System.Drawing.Point(84, 26);
+            this.textboxServerIP.Name = "textboxServerIP";
+            this.textboxServerIP.Size = new System.Drawing.Size(126, 21);
+            this.textboxServerIP.TabIndex = 2;
+            this.textboxServerIP.WordWrap = false;
+            this.textboxServerIP.TextChanged += new System.EventHandler(this.strSeverIP_TextChanged);
+            this.textboxServerIP.Leave += new System.EventHandler(this.strSeverIP_Leave);
             // 
             // labelSeverPort
             // 
@@ -227,7 +227,7 @@
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(814, 22);
+            this.buttonConnect.Location = new System.Drawing.Point(838, 22);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(75, 23);
             this.buttonConnect.TabIndex = 9;
@@ -244,29 +244,30 @@
             this.labelFtpPath.TabIndex = 10;
             this.labelFtpPath.Text = "远程路径";
             // 
-            // textBoxFtpPath
+            // textBoxServerPath
             // 
-            this.textBoxFtpPath.Location = new System.Drawing.Point(708, 24);
-            this.textBoxFtpPath.Name = "textBoxFtpPath";
-            this.textBoxFtpPath.Size = new System.Drawing.Size(100, 21);
-            this.textBoxFtpPath.TabIndex = 11;
+            this.textBoxServerPath.Location = new System.Drawing.Point(708, 24);
+            this.textBoxServerPath.Name = "textBoxServerPath";
+            this.textBoxServerPath.Size = new System.Drawing.Size(100, 21);
+            this.textBoxServerPath.TabIndex = 11;
             // 
-            // labelIPError
+            // textBoxServerMessage
             // 
-            this.labelIPError.AutoSize = true;
-            this.labelIPError.Location = new System.Drawing.Point(84, 54);
-            this.labelIPError.Name = "labelIPError";
-            this.labelIPError.Size = new System.Drawing.Size(41, 12);
-            this.labelIPError.TabIndex = 12;
-            this.labelIPError.Text = "label1";
+            this.textBoxServerMessage.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.textBoxServerMessage.Location = new System.Drawing.Point(15, 54);
+            this.textBoxServerMessage.Multiline = true;
+            this.textBoxServerMessage.Name = "textBoxServerMessage";
+            this.textBoxServerMessage.ReadOnly = true;
+            this.textBoxServerMessage.Size = new System.Drawing.Size(898, 130);
+            this.textBoxServerMessage.TabIndex = 12;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 602);
-            this.Controls.Add(this.labelIPError);
-            this.Controls.Add(this.textBoxFtpPath);
+            this.Controls.Add(this.textBoxServerMessage);
+            this.Controls.Add(this.textBoxServerPath);
             this.Controls.Add(this.labelFtpPath);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.textboxUserName);
@@ -275,7 +276,7 @@
             this.Controls.Add(this.labelUserPassword);
             this.Controls.Add(this.textboxSeverPort);
             this.Controls.Add(this.labelSeverPort);
-            this.Controls.Add(this.textboxFtpIP);
+            this.Controls.Add(this.textboxServerIP);
             this.Controls.Add(this.labelSeverIP);
             this.Controls.Add(this.TopmenuStrip);
             this.Name = "MainForm";
@@ -304,7 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem 帮助HToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.Label labelSeverIP;
-        private System.Windows.Forms.TextBox textboxFtpIP;
+        private System.Windows.Forms.TextBox textboxServerIP;
         private System.Windows.Forms.Label labelSeverPort;
         private System.Windows.Forms.TextBox textboxSeverPort;
         private System.Windows.Forms.Label labelUserPassword;
@@ -313,8 +314,8 @@
         private System.Windows.Forms.TextBox textboxUserName;
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.Label labelFtpPath;
-        private System.Windows.Forms.TextBox textBoxFtpPath;
-        private System.Windows.Forms.Label labelIPError;
+        private System.Windows.Forms.TextBox textBoxServerPath;
+        private System.Windows.Forms.TextBox textBoxServerMessage;
 
     }
 }
